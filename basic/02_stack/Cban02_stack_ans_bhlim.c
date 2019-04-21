@@ -88,7 +88,7 @@ int main(void) {
 	char** pptr = NULL;
 
 	// Get user input for test count
-	scanf ("%d", &inCnt);
+	scanf ("%d\n", &inCnt);
 
 	// Allocate memory for pointer array
 	pptr = (char**) malloc (sizeof(char*) * inCnt);
@@ -96,7 +96,7 @@ int main(void) {
 	for (int i = 0; i < inCnt; i++) {
 		pptr[i] = malloc (sizeof(char) * (MAX_STR_LEN+1));
 		memset (pptr[i], 0x00, MAX_STR_LEN+1);
-		scanf("%s", pptr[i]);
+		gets(pptr[i]);
 	}
 
 #ifdef DEBUG_PRINT

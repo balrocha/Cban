@@ -81,7 +81,7 @@ void printResult(char** rslt, int rsltCnt) {
 int main(void) {
 	int lineNum = 0;
 
-	scanf("%d", &lineNum);
+	scanf("%d\n", &lineNum);
 
 	if (lineNum < 1 || lineNum > MAX_WORD_COUNT) {
 		printf("Invalid input for word count!");
@@ -93,7 +93,7 @@ int main(void) {
 	for (int i = 0; i < lineNum; i++) {
 		int wordLen;
 
-		scanf("%s", inputStr);
+		gets(inputStr);
 
 		wordLen = strlen(inputStr);
 		pptr[i] = (char*)malloc(sizeof(char) * wordLen);
